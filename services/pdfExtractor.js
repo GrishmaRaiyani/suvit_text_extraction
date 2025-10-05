@@ -41,7 +41,7 @@ Text:
     });
 
     const raw = completion.choices[0].message?.content?.trim();
-    console.log("🧾 LLM Raw Output:\n", raw);
+    console.log(" LLM Raw Output:\n", raw);
 
     // --- Extract JSON safely ---
     const jsonMatch = raw?.match(/\{[\s\S]*\}/);
@@ -51,7 +51,7 @@ Text:
     try {
       data = JSON.parse(jsonMatch[0]);
     } catch (err) {
-      console.error("❌ JSON parse failed:", err.message);
+      console.error(" JSON parse failed:", err.message);
       throw new Error("Failed to parse JSON from LLM output");
     }
 
@@ -77,7 +77,7 @@ Text:
 
     return { success: true, count: data.transactions?.length || 0 };
   } catch (error) {
-    console.error("❌ extractTransactionsFromText Error:", error.message);
+    console.error(" extractTransactionsFromText Error:", error.message);
     return { success: false, error: error.message };
   }
 }
