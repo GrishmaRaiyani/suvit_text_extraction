@@ -88,3 +88,7 @@ suvit_text_extraction/
 ```bash
 node server.js
 ```
+You can watch the full working demo video here:
+
+[![Watch Demo Video](https://img.shields.io/badge/▶️%20Watch%20Demo%20on%20Google%20Drive-blue?style=for-the-badge)](https://drive.google.com/file/d/1cVxk-7tthmFcNIRawdxmc0OGxIocmsl_/view?usp=sharing)
+
