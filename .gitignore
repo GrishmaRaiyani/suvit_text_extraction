@@ -1,0 +1,61 @@
+# ---------------------------
+# 🧠 Node.js & OpenAI PDF Extractor Project
+# ---------------------------
+
+# --- Node dependencies ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Environment files ---
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# --- System files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+logs/
+*.log
+logs.txt
+debug.log
+error.log
+
+# --- Uploads / temp data ---
+uploads/
+extracted/
+data/*.pdf
+
+# --- IDE / Editor settings ---
+.vscode/
+.idea/
+*.swp
+
+# --- Python virtual environments (if using venv) ---
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# --- Package lock / auto-generated files ---
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# --- Build or output directories ---
+dist/
+build/
+out/
+
+# --- Jupyter notebooks ---
+*.ipynb_checkpoints/
+
+# --- Misc ---
+*.bak
+*.tmp
+*.old
