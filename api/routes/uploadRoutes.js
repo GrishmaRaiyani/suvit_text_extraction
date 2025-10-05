@@ -5,7 +5,7 @@ import { createRequire } from "module";
 import { extractTransactionsFromText } from "../../services/pdfExtractor.js";
 
 const require = createRequire(import.meta.url);
-const pdf = require("pdf-parse"); // ✅ CommonJS import inside ESM
+const pdf = require("pdf-parse"); //  CommonJS import inside ESM
 
 const router = express.Router();
 const upload = multer({ dest: "uploads/" });
@@ -13,7 +13,7 @@ const upload = multer({ dest: "uploads/" });
 router.post("/upload", upload.single("file"), async (req, res) => {
   try {
     const dataBuffer = fs.readFileSync(req.file.path);
-    const pdfData = await pdf(dataBuffer); // ✅ works now
+    const pdfData = await pdf(dataBuffer); //  works now
 
     const extractionResult = await extractTransactionsFromText(pdfData.text);
     fs.unlinkSync(req.file.path);
@@ -27,7 +27,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
       count: extractionResult.count,
     });
   } catch (err) {
-    console.error("❌ Error:", err);
+    console.error(" Error:", err);
     res.status(500).json({ error: "Error processing file" });
   }
 });
